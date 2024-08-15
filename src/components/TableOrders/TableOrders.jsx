@@ -4,9 +4,11 @@ import {
   IoChevronDownCircleOutline,
   IoCloseCircleOutline,
 } from 'react-icons/io5';
+import Cookies from 'js-cookie';
+
 import { handleOrderById } from '../../services/APIrequests';
 import { Loader } from '../Loader/Loader';
-import Cookies from 'js-cookie';
+
 import s from './TableOrders.module.scss';
 
 export const TableOrders = ({ isHeader, data }) => {
@@ -31,6 +33,9 @@ export const TableOrders = ({ isHeader, data }) => {
       const result = await handleOrderById(order_id, token);
       setOrderDetails(result.material);
     } catch (error) {
+      // Если код идет в прод console.log удаляем. Загрязнять консоль браузера не хорошо. Даже если это ошибка.
+      // Если ты не отработал ошибку где то выше она все равно у тебя в консоли появиться. 
+      // Лучше сделать всплывающее окно с ошибкой для пользователя, если конечно пользователь должен знать о ней.
       console.log('Ошибка!', error);
       setError('Не удалось получить данные.');
     } finally {
