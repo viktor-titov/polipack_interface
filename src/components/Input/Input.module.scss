@@ -1,0 +1,16 @@
+.input {
+  outline: none;
+  border: none;
+  font-size: large;
+  padding: 0.4rem 0.6rem;
+  &::placeholder {
+    color: #a1a0a0;
+  }
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid #000000;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+  }
+}

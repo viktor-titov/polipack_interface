@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    & > select {
+        padding: 0.4rem 0.6rem;
+        font-size: large;
+        outline: none;
+    }
+}
+
+.icon {
+    font-size: large;
+}
