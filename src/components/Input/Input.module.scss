@@ -9,7 +9,7 @@
   &_wrapper {
     display: flex;
     align-items: center;
-    border: 0.1rem solid #000000;
+    border: 0.1rem solid #000000; // По хорошему бы все цвета вынести в один файл спрятать их под scss или CSS переменными а сюда импорт.
     padding: 0.5rem;
     border-radius: 0.2rem;
   }

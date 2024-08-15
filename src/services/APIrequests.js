@@ -1,6 +1,8 @@
 export const handleAuth = async (data) => {
   try {
     const response = await fetch(
+      //  http://localhost:8000/api/v1 можно вынести в константу юзается много где. 
+      // будешь везде править если урл поменятется например на api/v2
       'http://localhost:8000/api/v1/api-token-auth/',
       {
         method: 'POST',

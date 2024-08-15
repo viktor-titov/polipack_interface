@@ -4,9 +4,11 @@ import {
   IoChevronDownCircleOutline,
   IoCloseCircleOutline,
 } from 'react-icons/io5';
+import Cookies from 'js-cookie';
+
 import { handleOrderById } from '../../services/APIrequests';
 import { Loader } from '../Loader/Loader';
-import Cookies from 'js-cookie';
+
 import s from './TableOrders.module.scss';
 
 export const TableOrders = ({ isHeader, data }) => {

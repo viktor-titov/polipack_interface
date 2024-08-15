@@ -1,13 +1,24 @@
+/** Тут наглядно удобно разделять импорт по группам
+ * первая глобальный импорт т.е пакетов которые ты ставишь
+ * 
+ * потом импорты локальных частей.
+ * 
+ * Можно еще вынести стили в самый низ. 
+*/
 import { useState, useEffect } from 'react';
-import { NavBar } from '../../components/Navbar/Navbar';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+
+import { NavBar } from '../../components/NavBar/NavBar';
 import { TableOrders } from '../../components/TableOrders/TableOrders';
 import { Button } from '../../components/Button/Button';
-import Cookies from 'js-cookie';
-import s from './MainPage.module.scss';
-import { useNavigate } from 'react-router-dom';
 import { handleRequestOrders } from '../../services/APIrequests';
 import { Loader } from '../../components/Loader/Loader';
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+
+import s from './MainPage.module.scss';
+
+
 
 export const MainPage = () => {
   const [orders, setOrders] = useState([]);
